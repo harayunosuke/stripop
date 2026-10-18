@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STRIPOP | Lighter Case Accessory Shop</title>
+  <meta name="description" content="STRIPOP - ボーダー柄のライターケース専門アクセサリーショップ">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- お知らせバー -->
+  <div class="topbar">
+    <div class="topbar__track">
+      <span>FREE SHIPPING OVER ¥5,000</span><span>★</span>
+      <span>送料無料キャンペーン実施中</span><span>★</span>
+      <span>NEW LIGHTER CASES COMING SOON</span><span>★</span>
+      <span>FREE SHIPPING OVER ¥5,000</span><span>★</span>
+      <span>送料無料キャンペーン実施中</span><span>★</span>
+      <span>NEW LIGHTER CASES COMING SOON</span><span>★</span>
+    </div>
+  </div>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="#" class="logo" aria-label="STRIPOP トップへ">STRI<span>POP</span></a>
+      <nav class="nav" id="nav">
+        <a href="#products">SHOP</a>
+        <a href="#concept">CONCEPT</a>
+        <a href="#guide">GUIDE</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+      <div class="header__actions">
+        <button class="cart-btn" id="cartOpen" aria-label="カートを開く">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+          <span class="cart-btn__count" id="cartCount">0</span>
+        </button>
+        <button class="menu-btn" id="menuBtn" aria-label="メニュー" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ヒーロー -->
+    <section class="hero">
+      <div class="hero__stripes" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <p class="hero__label">LIGHTER CASE SPECIALTY STORE</p>
+        <h1 class="hero__title">
+          <span class="hero__line">STRIPE</span>
+          <span class="hero__line hero__line--outline">YOUR</span>
+          <span class="hero__line">FIRE.</span>
+        </h1>
+        <p class="hero__lead">ポケットの中に、ボーダーの存在感を。<br>STRIPOPのライターケースコレクション。</p>
+        <div class="hero__buttons">
+          <a href="#products" class="btn btn--primary">SHOP NOW →</a>
+          <a href="#concept" class="btn btn--ghost">ABOUT US</a>
+        </div>
+      </div>
+      <div class="hero__badge" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <defs><path id="circle" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+          <text><textPath href="#circle">STRIPOP ★ LIGHTER CASE ★ ACCESSORY ★ </textPath></text>
+        </svg>
+        <span>NEW</span>
+      </div>
+    </section>
+
+    <!-- 警告テープ風マーキー -->
+    <div class="tape">
+      <div class="tape__track">
+        <span>STRIPOP</span><span>/</span><span>LIGHTER CASE</span><span>/</span><span>BORDER STYLE</span><span>/</span>
+        <span>STRIPOP</span><span>/</span><span>LIGHTER CASE</span><span>/</span><span>BORDER STYLE</span><span>/</span>
+        <span>STRIPOP</span><span>/</span><span>LIGHTER CASE</span><span>/</span><span>BORDER STYLE</span><span>/</span>
+        <span>STRIPOP</span><span>/</span><span>LIGHTER CASE</span><span>/</span><span>BORDER STYLE</span><span>/</span>
+      </div>
+    </div>
+
+    <!-- 商品一覧 -->
+    <section class="section products" id="products">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__num">01</p>
+          <h2 class="section__title">ITEMS</h2>
+          <p class="section__sub">商品一覧</p>
+        </div>
+
+        <div class="toolbar">
+          <div class="filters" id="filters" role="tablist" aria-label="カテゴリー"></div>
+          <label class="sort">
+            <span>並び替え</span>
+            <select id="sort">
+              <option value="default">おすすめ順</option>
+              <option value="new">新着順</option>
+              <option value="price-asc">価格の安い順</option>
+              <option value="price-desc">価格の高い順</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <!-- コンセプト -->
+    <section class="section concept" id="concept">
+      <div class="container concept__inner">
+        <div class="concept__visual" aria-hidden="true">
+          <div class="concept__case">
+            <div class="concept__lid"></div>
+            <div class="concept__body"></div>
+          </div>
+        </div>
+        <div class="concept__text">
+          <div class="section__head section__head--left">
+            <p class="section__num">02</p>
+            <h2 class="section__title">CONCEPT</h2>
+            <p class="section__sub">コンセプト</p>
+          </div>
+          <p class="concept__copy">“ライン一本で、<br>毎日はもっとポップになる。”</p>
+          <p>STRIPOP（ストリポップ）は、ボーダー柄をテーマにしたライターケースのアクセサリーブランドです。手にするたびに気分が上がる、遊び心のあるデザインをお届けします。</p>
+          <p>ここにブランドストーリーやこだわり、素材・製法の説明を入れてください。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 特徴 -->
+    <section class="section features" id="guide">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__num">03</p>
+          <h2 class="section__title">GUIDE</h2>
+          <p class="section__sub">ご利用ガイド</p>
+        </div>
+        <div class="features__grid">
+          <article class="feature">
+            <p class="feature__icon">01</p>
+            <h3>送料</h3>
+            <p>全国一律 ¥000。<br>¥5,000以上のご購入で送料無料。</p>
+          </article>
+          <article class="feature">
+            <p class="feature__icon">02</p>
+            <h3>お支払い</h3>
+            <p>クレジットカード / コンビニ決済 / 銀行振込などに対応予定。</p>
+          </article>
+          <article class="feature">
+            <p class="feature__icon">03</p>
+            <h3>配送</h3>
+            <p>ご注文から3〜5営業日以内に発送いたします。</p>
+          </article>
+          <article class="feature">
+            <p class="feature__icon">04</p>
+            <h3>返品・交換</h3>
+            <p>商品到着後7日以内、未使用品に限り承ります。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head">
+          <p class="section__num">04</p>
+          <h2 class="section__title">FAQ</h2>
+          <p class="section__sub">よくある質問</p>
+        </div>
+        <div class="faq__list">
+          <details class="faq__item">
+            <summary>どのライターに対応していますか？</summary>
+            <p>商品ごとに対応サイズを記載しています。一般的な使い捨てライター（BIC J6 / J25 等）に対応したモデルを中心に展開予定です。</p>
+          </details>
+          <details class="faq__item">
+            <summary>ライター本体は付属しますか？</summary>
+            <p>ケースのみの販売となります。ライター本体は付属しません。</p>
+          </details>
+          <details class="faq__item">
+            <summary>ギフトラッピングはできますか？</summary>
+            <p>ご注文時の備考欄にてお申し付けください（ラッピング詳細はここに記載）。</p>
+          </details>
+          <details class="faq__item">
+            <summary>注文後のキャンセルはできますか？</summary>
+            <p>発送前であればキャンセル可能です。お問い合わせフォームよりご連絡ください。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ニュースレター / お問い合わせ -->
+    <section class="section contact" id="contact">
+      <div class="container contact__inner">
+        <div>
+          <h2 class="contact__title">GET THE<br>NEWS FIRST.</h2>
+          <p>新作入荷・再入荷の情報をいち早くお届けします。</p>
+        </div>
+        <form class="newsletter" id="newsletter">
+          <label class="visually-hidden" for="email">メールアドレス</label>
+          <input type="email" id="email" placeholder="your@email.com" required>
+          <button type="submit" class="btn btn--dark">SUBSCRIBE</button>
+          <p class="newsletter__msg" id="newsletterMsg" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="footer__stripe" aria-hidden="true"></div>
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="logo logo--large">STRI<span>POP</span></a>
+        <p>Lighter Case Accessory Shop</p>
+        <div class="sns">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="X">X</a>
+          <a href="#" aria-label="TikTok">TT</a>
+        </div>
+      </div>
+      <div class="footer__links">
+        <div>
+          <h4>SHOP</h4>
+          <a href="#products">商品一覧</a>
+          <a href="#products">新着アイテム</a>
+          <a href="#guide">ご利用ガイド</a>
+        </div>
+        <div>
+          <h4>INFO</h4>
+          <a href="#">特定商取引法に基づく表記</a>
+          <a href="#">プライバシーポリシー</a>
+          <a href="#contact">お問い合わせ</a>
+        </div>
+      </div>
+    </div>
+    <p class="footer__copy">© <span id="year"></span> STRIPOP. ALL RIGHTS RESERVED.</p>
+  </footer>
+
+  <!-- 商品詳細モーダル -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" data-close aria-label="閉じる">×</button>
+      <div class="modal__content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- カートドロワー -->
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer__overlay" data-close-cart></div>
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="ショッピングカート">
+      <div class="drawer__head">
+        <h2>CART</h2>
+        <button class="drawer__close" data-close-cart aria-label="カートを閉じる">×</button>
+      </div>
+      <div class="drawer__body" id="cartItems"></div>
+      <div class="drawer__foot">
+        <div class="drawer__total"><span>小計</span><strong id="cartTotal">¥0</strong></div>
+        <p class="drawer__note">送料・税は購入手続き時に計算されます。</p>
+        <button class="btn btn--primary btn--block" id="checkout">購入手続きへ</button>
+      </div>
+    </aside>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
